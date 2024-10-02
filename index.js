@@ -15,7 +15,7 @@ const pool = new Pool({
 // Ruta para consultar datos de la base de datos
 app.get('/data', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM my_table'); // Cambia 'my_table' por tu tabla
+    const result = await pool.query('SELECT * FROM my_table;'); // Cambia 'my_table' por tu tabla
     res.json(result.rows);
   } catch (err) {
     console.error(err);
